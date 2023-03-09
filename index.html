@@ -7,17 +7,63 @@
         <script type="module" src="j/carousel.js"></script>
     </head>
     <body>
-        <h1>Our Current Inventory</h1>
+        <h1>All our Photos</h1>
+
+        <ul id="nav">
+            <li><a href="#cars" class="statusOn">Cars</a></li>
+            <li><a href="#clouds">Clouds</a></li>
+            <li><a href="#frogs">Frogs</a></li>
+            <li><a href="#vampies">Vampires</a></li>
+        </ul>
 
         <article class="carousel">
-            <h2>Cars</h2>
+            <h2>Photos</h2>
 
             <figure class="frame">
-                <img class="slide current" src="i/car1.jpg" alt="This is the first car" />
-                <img class="slide" src="i/car2.jpg" alt="Here is the second car" />
-                <img class="slide" src="i/car3.jpg" alt="The third car's a charm" />
-                <img class="slide" src="i/car4.jpg" alt="Our fourth car" />
-                <figcaption>These are our cars</figcaption>
+                <section id="cars">
+                    <h3>Cars</h3>
+                    <img class="slide current" src="i/cars/car1.jpg" alt="This is the first car" />
+                    <img class="slide" src="i/cars/car2.jpg" alt="Here is the second car" />
+                    <img class="slide" src="i/cars/car3.jpg" alt="The third car's a charm" />
+                    <img class="slide" src="i/cars/car4.jpg" alt="Our fourth car" />
+                </section>
+
+                <section id="clouds">
+                    <h3>Clouds</h3>
+                    <img class="slide current" src="i/cloud1.jpg" alt="This is the first cloud" />
+                    <img class="slide" src="i/clouds/cloud2.jpg" alt="Here is the second cloud" />
+                    <img class="slide" src="i/clouds/cloud3.jpg" alt="The third cloud's a charm" />
+                    <img class="slide" src="i/clouds/cloud4.jpg" alt="Our fourth cloud" />
+                </section>
+
+                <section id="frogs">
+                    <h3>Frogs</h3>
+                    <img
+                        class="slide current"
+                        src="i/frogs/frog1.jpg"
+                        alt="This is the first frog" />
+                    <img class="slide" src="i/frogs/frog2.jpg" alt="Here is the second frog" />
+                    <img class="slide" src="i/frogs/frog3.jpg" alt="The third frog's a charm" />
+                    <img class="slide" src="i/frogs/frog4.jpg" alt="Our fourth frog" />
+                </section>
+
+                <section id="vampires">
+                    <h3>Vampires</h3>
+                    <img
+                        class="slide current"
+                        src="i/vampire1.jpg"
+                        alt="This is the first vampire" />
+                    <img
+                        class="slide"
+                        src="i/vampires/vampire2.jpg"
+                        alt="Here is the second vampire" />
+                    <img
+                        class="slide"
+                        src="i/vampires/vampire3.jpg"
+                        alt="The third vampire's a charm" />
+                    <img class="slide" src="i/vampires/vampire4.jpg" alt="Our fourth vampire" />
+                </section>
+                <figcaption>These are our photos</figcaption>
             </figure>
 
             <div class="controls hide">
