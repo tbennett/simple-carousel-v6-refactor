@@ -23,7 +23,7 @@ function init() {
     const controls = document.querySelector(".controls");
     const caption = frame.querySelector("figcaption");
     const nav = document.querySelector('.albums-nav');
-    const links = nav.querySelectorAll("A");
+    const links = nav.querySelectorAll("a");
 
     links.forEach((link) => {
         link.addEventListener("click", changeAlbum);
@@ -134,6 +134,8 @@ function changeAlbum(e) {
     const nextSlide = nextSlides[0];
     const frame = document.querySelector('.frame');
     const caption = frame.querySelector('figcaption');
+    const nav = document.querySelector('.albums-nav');
+    const links = nav.querySelectorAll('A');
 
     const currentAlbum = document.querySelector('section.current');
     const currentSlide = currentAlbum.querySelector('.current');
@@ -148,5 +150,11 @@ function changeAlbum(e) {
     nextSlide.classList.add("current");
 
     caption.innerHTML = nextSlide.alt;
+
+    links.forEach((link) => {
+        link.classList.remove('status-on');
+    });
+
+    e.target.classList.add('status-on');
 
 }

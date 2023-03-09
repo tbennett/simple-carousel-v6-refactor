@@ -8,7 +8,6 @@ body {
 }
 
 .carousel {
-    //width: 400px;
     margin: auto;
 }
 
@@ -23,10 +22,11 @@ body {
 .frame-sans-js {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
-    width: 100vw;
+    width: 98vw;
     height: auto;
-    margin: 1rem 0;
+    margin: 1rem auto;
 }
 
 .slide {
@@ -36,7 +36,7 @@ body {
 
 /* unfortunately it's not possible to use the content property on img tags :(
 A work around would be to wrap the images in a div and add the ::after  content to the div */
-.slide::after {
+//.slide::after {
     content: attr(alt);
     display: block;
 }
@@ -55,6 +55,11 @@ A work around would be to wrap the images in a div and add the ::after  content 
 
 .current {
     transition: opacity 0.5s ease-out;
+}
+
+.status-on {
+    font-weight: bold;
+    color: red;
 }
 
 .controls {
