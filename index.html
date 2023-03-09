@@ -9,18 +9,20 @@
     <body>
         <h1>All our Photos</h1>
 
-        <ul id="nav">
-            <li><a href="#cars" class="statusOn">Cars</a></li>
-            <li><a href="#clouds">Clouds</a></li>
-            <li><a href="#frogs">Frogs</a></li>
-            <li><a href="#vampires">Vampires</a></li>
-        </ul>
+        <nav class="albums-nav hide">
+            <ul>
+                <li><a href="#cars" class="statusOn">Cars</a></li>
+                <li><a href="#clouds">Clouds</a></li>
+                <li><a href="#frogs">Frogs</a></li>
+                <li><a href="#vampires">Vampires</a></li>
+            </ul>
+        </nav>
 
         <article class="carousel">
             <h2>Photos</h2>
 
-            <figure class="frame">
-                <section id="cars" class="">
+            <figure class="frame frame-sans-js">
+                <section id="cars">
                     <h3>Cars</h3>
                     <img class="slide" src="i/cars/car1.jpg" alt="This is the first car">
                     <img class="slide" src="i/cars/car2.jpg" alt="Here is the second car">
@@ -51,7 +53,7 @@
                     <img class="slide" src="i/vampires/vampire3.jpg" alt="The third vampire's a charm">
                     <img class="slide" src="i/vampires/vampire4.jpg" alt="Our fourth vampire">
                 </section>
-                <figcaption>These are our photos</figcaption>
+                <figcaption class="hide">These are our photos</figcaption>
             </figure>
 
             <div class="controls hide">

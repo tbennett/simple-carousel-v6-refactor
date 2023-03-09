@@ -22,7 +22,7 @@ function init() {
    
     const controls = document.querySelector(".controls");
     const caption = frame.querySelector("figcaption");
-    const nav = document.getElementById("nav");
+    const nav = document.querySelector('.albums-nav');
     const links = nav.querySelectorAll("A");
 
     links.forEach((link) => {
@@ -56,7 +56,13 @@ function init() {
     back_btn.addEventListener("click", changeSlide);
 
     // setup the caption display
-    caption.classList.add("caption");
+    caption.classList.add('caption');
+    caption.classList.remove('hide')
+
+    frame.style.overflow = 'hidden';
+    nav.classList.remove('hide');
+    frame.classList.remove('frame-sans-js');
+
 
     // create the timer to sutoplay slides
     myInterval = setInterval(changeSlide, 5000);
