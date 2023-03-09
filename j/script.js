@@ -57,7 +57,7 @@
 
         // setup the neccessary DOM references
         const frame = document.querySelector(".frame");
-        const showing = frame.querySelector(".current");
+        const showing = frame.querySelector("img.current");
         const slides = frame.querySelectorAll("img");
         const caption = document.querySelector(".caption");
         let nextUp = "";
