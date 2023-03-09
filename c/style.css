@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align:center;
+  font-family: sans-serif;
+}
+
+.carousel {
+  width: 400px;
+  margin: auto;
+}
+
+.frame {
+  position:relative;
+  width:400px;
+  height:300px;
+  margin: 1rem 0;
+}
+
+.slide {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* unfortunately it's not possible to use the content property on img tags :(
+A work around would be to wrap the images in a div and add the ::after  content to the div */
+.slide::after {
+  content: attr(alt);
+  display:block;
+}
+
+.pos-abs {
+  position: absolute;
+  margin-bottom:0;
+  top:0;
+  left:0;
+}
+
+
+.hide {
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+
+.current {
+  transition: opacity .5s ease-out;
+}
+
+.controls a {
+  padding: 1rem;
+} 
+
+.caption {
+  position:absolute;
+  bottom: 0;
+  z-index: 2;
+  background: hsla(90deg, 0%, 0%, .7);
+  width:100%;
+  padding:.7rem;
+  color: white;
+}
