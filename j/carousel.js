@@ -1,3 +1,10 @@
+/*
+* TODO: 
+* refactor to breakdown large functions into smaller
+* easier to debug pure functions where possible
+*/
+
+
 // get the whole thing started
 document.addEventListener("DOMContentLoaded", init);
 
@@ -76,6 +83,7 @@ function init() {
  * ARGS: e - the event object passed by addEventListener.
  */
 function changeSlide(e) {
+
     // deactivate link's normal functionality
     // and stop autoplay, only if there is a click event object.
     if (e) {
@@ -123,11 +131,15 @@ function changeSlide(e) {
 }
 
 function changeAlbum(e) {
+
+    // stop album links for reloading page
+    // stop the autoplay
     if (e) {
         e.preventDefault();
         clearInterval(myInterval);
     }
 
+    // create required shortcut variable references
     const nextAlbumName = `${e.target.innerText}`.toLowerCase();
     const nextAlbum = document.getElementById(nextAlbumName);
     const nextSlides = nextAlbum.querySelectorAll('IMG');
@@ -136,25 +148,31 @@ function changeAlbum(e) {
     const caption = frame.querySelector('figcaption');
     const nav = document.querySelector('.albums-nav');
     const links = nav.querySelectorAll('A');
-
     const currentAlbum = document.querySelector('section.current');
     const currentSlide = currentAlbum.querySelector('.current');
 
+    // decommission the current album and slide
     currentAlbum.classList.add("hide");
     currentAlbum.classList.remove("current");
     currentSlide.classList.remove("current");
     
+    // update appearances of albums and slides
     nextAlbum.classList.remove("hide");
     nextAlbum.classList.add("current");
     nextSlide.classList.remove("hide");
     nextSlide.classList.add("current");
 
+    // update the caption text to 
+    // first slide of new album
     caption.innerHTML = nextSlide.alt;
 
+    // clearout all status indication
     links.forEach((link) => {
         link.classList.remove('status-on');
     });
 
+    // turn on status indicator for the 
+    // newly selected album only.
     e.target.classList.add('status-on');
 
 }
