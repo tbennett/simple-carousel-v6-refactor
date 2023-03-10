@@ -6,7 +6,7 @@
 
 
 // get the whole thing started
-//document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", init);
 
 // create the global (to this module) variable
 // to allow access to our autoplay timer
